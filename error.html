@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <!--LA HEAD NO SE VE-->
+
+
+    
+
+    <link rel="stylesheet" type="text/css" media="all" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" /><link rel="stylesheet" type="text/css" media="all" href="https://cdn.datatables.net/fixedheader/3.1.5/css/fixedHeader.dataTables.min.css" /><link rel="stylesheet" type="text/css" media="all" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="HandheldFriendly" content="True" /><meta name="apple-mobile-web-app-status-bar-style" content="black" /><link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" media="all" href="/shared/scripts/megamenu/css/color-theme.css" /><link rel="stylesheet" type="text/css" media="all" href="/shared/scripts/megamenu/css/webslidemenu.css?20190401" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png?v=2bb5zdzbXP" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png?v=2bb5zdzbXP" /><link rel="icon" type="image/png" href="/favicon-32x32.png?v=2bb5zdzbXP" sizes="32x32" /><link rel="icon" type="image/png" href="/android-chrome-192x192.png?v=2bb5zdzbXP" sizes="192x192" /><link rel="icon" type="image/png" href="/favicon-96x96.png?v=2bb5zdzbXP" sizes="96x96" /><link rel="icon" type="image/png" href="/favicon-16x16.png?v=2bb5zdzbXP" sizes="16x16" />
+    <!--<link rel="manifest" href="/manifest.json?v=2bb5zdzbXP" />-->
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2bb5zdzbXP" color="#2f8646" /><link rel="shortcut icon" href="/favicon.ico?v=2bb5zdzbXP" /><meta name="msapplication-TileColor" content="#da532c" /><meta name="msapplication-TileImage" content="/mstile-144x144.png?v=2bb5zdzbXP" /><meta name="theme-color" content="#ffffff" /><meta property="og:site_name" content="InfoDolar.com" /><meta property="og:title" content="www.infodolar.com" /><meta property="og:description" content="Cotización del dólar en bancos y casas de cambio" /><meta property="og:image" itemprop="image" content="https://www.infodolar.com/wa-infodolar.png" /><meta property="og:type" content="website" /><meta property="og:updated_time" content="1440432930" />
+    <script type="text/javascript">
+        setTimeout(function () {
+            location = ''
+        }, 300000)
+    </script>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ACÁ SE LINKEAN LOS ESTILOS-->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!--ACÁ VA BOOTSTRAP ¡NO TOCAR!-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    <title>Formulario</title>
+
+    <!--ACÁ ESTÁ EL SEO-->
+
+	<meta name="keywords" content=" Dolar, Dolar Cordoba, Comprar Dolares Cordoba, Asesoria financiera, Asesoria financiera Córdoba">
+    
+      <!--<link rel="manifest" href="/manifest.json?v=2bb5zdzbXP" />-->
+      <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2bb5zdzbXP" color="#2f8646" /><link rel="shortcut icon" href="/favicon.ico?v=2bb5zdzbXP" /><meta name="msapplication-TileColor" content="#da532c" /><meta name="msapplication-TileImage" content="/mstile-144x144.png?v=2bb5zdzbXP" /><meta name="theme-color" content="#ffffff" /><meta property="og:site_name" content="InfoDolar.com" /><meta property="og:title" content="www.infodolar.com" /><meta property="og:description" content="Cotización del dólar en bancos y casas de cambio" /><meta property="og:image" itemprop="image" content="https://www.infodolar.com/wa-infodolar.png" /><meta property="og:type" content="website" /><meta property="og:updated_time" content="1440432930" />
+    
+
+</head>
+
+<body class="container-fluid">
+
+    <div>
+        <div id="header">
+            <a href="https://www.infodolar.com/" id="logo"><img src="img/infodolar.png"  alt="dolar hoy" width="170" height="59" /></a>
+          
+            <span id="bannerNews">
+                Si querés recibir info sobre el <strong>dólar hoy</strong> en tu email, <a href="https://optin.myperfit.com/subscribe/fventures/aKDOtKp3" target="_blank" rel="nofollow"><strong>¡Suscribite GRATIS ahora!</strong></a>
+            </span>
+        
+            <div id="social">
+                <span>Seguinos</span>
+                <a href="https://www.instagram.com/infodolar/" target="_blank" rel="nofollow"><i class="fab fa-instagram fa-2x instagram"></i></a>
+                <a href="https://www.facebook.com/infodolarcom/" target="_blank" rel="nofollow"><i class="fab fa-facebook fa-2x facebook"></i></a>
+                <a href="https://twitter.com/infodolar" target="_blank" rel="nofollow"><i class="fab fa-twitter fa-2x twitter"></i></a>
+                <a href="https://optin.myperfit.com/subscribe/fventures/aKDOtKp3" target="_blank" rel="nofollow" title="el dólar en tu email"><i class="far fa-envelope fa-2x newsletter"></i></a>    
+            </div>
+          
+        </div>
+        
+    </div>
+
+    <div>
+        <ul class="nav nav-tabs nav-fill navbar-custom">
+            <li class="nav-item">
+              <a class="nav-link vital" href="https://www.infodolar.com/"><i class="fa fa-home"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+            
+                <a class="nav-link dropdown-toggle vital text-decoration-none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+                    <i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;Dólar <span class="arrow">
+    
+                    </a>
+    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+    
+                        <a  class="dropdown-item" href="https://www.infodolar.com/cotizacion-dolar.aspx"><i class="fa fa-table fa-fw"></i>Cotización Dólar</a>
+    
+                        
+            
+                        <a class="dropdown-item" href="https://www.infodolar.com/cambio-online.aspx"><i class="fa fa-globe fa-fw"></i>Casas de cambio online</a>
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-blue.aspx"><i class="fa fa-money-bill-alt fa-fw"></i>Dólar Blue</a>
+        
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-contado-con-liquidacion.aspx"><i class="fa fa-money-bill-alt fa-fw"></i>Dólar Contado con Liquidación</a>
+
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-mayorista.aspx"><i class="fa fa-money-bill-alt fa-fw"></i>Dólar Mayorista</a>
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-oficial.aspx"><i class="fa fa-money-bill-alt fa-fw"></i>Dólar Oficial</a>
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-paralelo.aspx"><i class="fa fa-money-bill-alt fa-fw"></i>Dólar Paralelo</a>
+        
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/dolar-a-peso-argentino.aspx"><i class="fa fa-exchange-alt fa-fw"></i>Dólar a peso argentino</a>
+
+            
+                        <a class="dropdown-item" href="https://www.infodolar.com/peso-argentino-a-dolar.aspx"><i class="fa fa-exchange-alt fa-fw"></i>Peso argentino a dólar</a>
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-provincia-capital-federal.aspx"><i class="fa fa-map-marker fa-fw"></i>Dólar por provincia</a>
+
+            
+                        <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-dolar-localidad-la-plata-provincia-buenos-aires.aspx"><i class="fa fa-map-signs fa-fw"></i>Dólar por ciudad</a>
+
+        
+                        <a class="dropdown-item"href="https://www.infodolar.com/donde-comprar-dolares.aspx"><i class="fa fa-university fa-fw"></i>Dónde comprar dólares</a>
+        
+    
+                    </div>
+    
+
+                </li>
+
+                <li class="nav-item dropdown">
+            
+                    <a class="nav-link dropdown-toggle vital text-decoration-none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        
+                        <i class="fas fa-euro-sign"></i>&nbsp;&nbsp;Euro <span class="arrow"></span>
+        
+                        </a>
+        
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            
+        
+                            <a  class="dropdown-item" href="https://www.infodolar.com/cotizacion-euro.aspx"><i class="fa fa-table fa-fw"></i>Cotización Euro</a>
+    
+                            <a class="dropdown-item" href="https://www.infodolar.com/euro-a-peso-argentino.aspx"><i class="fa fa-exchange-alt fa-fw"></i>Euro a peso argentino</a>
+
+                            <a class="dropdown-item" href="https://www.infodolar.com/peso-argentino-a-euro.aspx"><i class="fa fa-exchange-alt fa-fw"></i>Peso argentino a euro</a>
+                        
+                            <a class="dropdown-item" href="https://www.infodolar.com/cotizacion-euro-provincia-capital-federal.aspx"><i class="fa fa-map-marker fa-fw"></i>Euro por provincia</a>
+
+
+                            <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-euro-localidad-la-plata-provincia-buenos-aires.aspx"><i class="fa fa-map-signs fa-fw"></i>Euro por ciudad</a>
+
+                            <a class="dropdown-item" href="https://www.infodolar.com/donde-comprar-euros.aspx"><i class="fa fa-university fa-fw"></i>Dónde comprar euros</a>
+        
+                        </div>
+        
+    
+                    </li>
+
+                    <li class="nav-item dropdown">
+    
+                        <a class="nav-link dropdown-toggle vital text-decoration-none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            
+                            <i class="far fa-money-bill-alt"></i>&nbsp;&nbsp;Más monedas<span class="arrow"></span>
+
+                        </a>
+            
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+            
+                                <a  class="dropdown-item" href="https://www.infodolar.com/cotizacion-real.aspx"><i class="fa fa-table fa-fw"></i>Cotización Real</a>
+    
+                                <a class="dropdown-item" href="https://www.infodolar.com/cotizacion-libra.aspx"><i class="fa fa-angle-right"></i>Libra</a>
+                        
+                                <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-franco-suizo.aspx"><i class="fa fa-angle-right"></i>Franco suizo</a>
+                            
+                                <a class="dropdown-item"a href="https://www.infodolar.com/cotizacion-peso-uruguayo.aspx"><i class="fa fa-angle-right"></i>Peso uruguayo</a>
+                        
+                        
+                                <a class="dropdown-item"a href="https://www.infodolar.com/cotizacion-peso-chileno.aspx"><i class="fa fa-angle-right"></i>Peso chileno</a>
+                        
+                                <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-guarani.aspx"><i class="fa fa-angle-right"></i>Guaraní</a>
+                        
+                                <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-peso-boliviano.aspx"><i class="fa fa-angle-right"></i>Peso boliviano</a>
+                            
+                        
+                                <a class="dropdown-item"href="https://www.infodolar.com/cotizacion-usdc.aspx"><i class="fa fa-angle-right"></i>Stablecoins</a>
+                        
+                            
+                            </div>
+            
+                                            
+                            <li class="nav-item">
+                    
+                                <a class="nav-link vital" href="https://www.infodolar.com/blog/">Blog<span class="sr-only"></span></a>
+                    
+                            </li>
+                            
+                            <li class="nav-item">
+                    
+                                <a class="nav-link vital" href="https://optin.myperfit.com/subscribe/fventures/aKDOtKp3">Newsletter</a>
+                    
+                            </li>
+                    
+                            <li class="nav-item">
+                    
+                                <a class="nav-link vital text-decoration-none" href="#contacto">Contacto</a>
+                    
+                            </li>
+                            
+                        </li> 
+            
+          </ul>
+    </div>
+
+
+    <div>
+        
+        <div class="widerContent">
+            <div id="contacto">
+            <h2 class="superTitulo">¡Algo salió mal!</h2>
+            
+            <p>Su mensaje no pudo enviarse.</p>
+                
+            <a href="index.html">Intentar de nuevo</a>
+                
+    </div>
+    
+        
+    
+    </div>
+
+    <div>
+        
+        <footer>
+         
+            <h2 class="superTitulo">Otras cotizaciones</h2>
+            
+            <div class="listasFooter">
+            
+                <ul>  
+            
+                    <li><a href="http://www.infodolar.com/cotizacion-corona-danesa.aspx">Corona Danesa</a></li>
+            
+                    <li><a href="https://www.infodolar.com/cotizacion-dolar.aspx">Dólar</a></li>
+            
+                    <li><a href="https://www.infodolar.com/cotizacion-dolar-bolsa.aspx">Dólar Bolsa</a></li>
+            
+                    <li><a href="https://www.infodolar.com/cotizacion-dolar-fuga.aspx">Dólar Fuga</a></li>
+            
+                    <li><a href="https://www.infodolar.com/cotizacion-dolar-mayorista.aspx">Dólar Mayorista</a></li>
+            
+                    <li><a href="https://www.infodolar.com/cotizacion-dolar-oficial.aspx">Dólar Oficial</a></li>
+            
+                    <li><a href="https://www.infodolar.com/cotizacion-franco-suizo.aspx">Franco suizo</a></li>
+            
+                    <li><a href="http://">Lira turca</a></li>
+            
+                    <li><a href="http://">Peso uruguayo</a></li>
+            
+                    <li><a href="http://">Shekel israelí</a></li>
+            
+                    <li><a href="http://">Yuan</a></li>
+            
+                                
+                </ul>
+
+                <ul>  
+            
+                    <li><a href="http://">Corona noruega</a></li>
+            
+                    <li><a href="http://">Dólar australiano</a></li>
+            
+                    <li><a href="http://">Dólar canadiense</a></li>
+            
+                    <li><a href="http://">Dólar Gris</a></li>
+            
+                    <li><a href="http://">Dólar Mayorista Bancos</a></li>
+            
+                    <li><a href="http://">Dólar Paralelo</a></li>
+            
+                    <li><a href="http://">Guaraní</a></li>
+            
+                    <li><a href="http://">Peso boliviano</a></li>
+            
+                    <li><a href="http://">Rand sudafricano</a></li>
+            
+                    <li><a href="http://">Sol</a></li>
+            
+                    <li><a href="http://">Zloty</a></li>
+            
+                </ul>
+
+                <ul>  
+            
+                    <li><a href="http://">Corona sueca</a></li>
+            
+                    <li><a href="http://">Dólar Azul</a></li>
+            
+                    <li><a href="http://">Dólar Contado con Liqui</a></li>
+            
+                    <li><a href="http://">Dólar Informal</a></li>
+            
+                    <li><a href="http://">Dólar MEP</a></li>
+            
+                    <li><a href="http://">Dólar taiwanés</a></li>
+            
+                    <li><a href="http://">Kuna Croata</a></li>
+            
+                    <li><a href="http://">Peso chileno</a></li>
+            
+                    <li><a href="http://">USDC</a></li>
+            
+                    
+                </ul>
+                <ul>  
+            
+                    <li><a href="http://">DAI</a></li>
+            
+                    <li><a href="http://">Dólar Banco</a></li>
+            
+                    <li><a href="http://">Dólar Contado con Liquidación</a></li>
+            
+                    <li><a href="http://">Dólar Libre</a></li>
+            
+                    <li><a href="http://">Dólar Negro</a></li>
+            
+                    <li><a href="http://">Euro</a></li>
+            
+                    <li><a href="http://">Libra</a></li>
+            
+                    <li><a href="http://">Peso colombiano</a></li>
+            
+                    <li><a href="http://">Rublo ruso</a></li>
+            
+                    <li><a href="http://">Won surcoreano</a></li>
+            
+            
+                </ul>
+
+                <ul>  
+            
+                    <li><a href="http://">Dírham</a></li>
+            
+                    <li><a href="http://">Dólar Blue</a></li>
+            
+                    <li><a href="http://">Dólar de Singapur</a></li>
+            
+                    <li><a href="http://">Dólar Marginal</a></li>
+            
+                    <li><a href="http://">Dólar neozelandés</a></li>
+            
+                    <li><a href="http://">Florín húngaro</a></li>
+            
+                    <li><a href="http://">Lira libanesa</a></li>
+            
+                    <li><a href="http://">Peso mexicano</a></li>
+            
+                    <li><a href="http://">Rupia</a></li>
+            
+                    <li><a href="http://">Yen</a></li>
+            
+          
+            
+                </ul>
+        
+            </div>
+            
+            <div id="piePagina">
+                <ul>
+                    <li>
+                        <a href="">El Dólar en otros países</a>
+                    </li>
+                    
+                    <li>
+                        <a href="">Colombia - Dólar hoy</a>
+                    </li>
+
+                    <li>
+                        <a href="">España - Cambio Euro Dólar</a>
+                    </li>
+
+                    <li>
+                        <a href=""> Estados Unidos - Euro to dollar</a>
+                    </li>
+
+                    <li>
+                        <a href="">Guatemala - Precio del Dólar</a>
+                    </li>
+
+                    <li>
+                        <a href="">México - Dólar hoy</a>
+                    </li>
+
+                    <li>
+                        <a href="">Nicaragua - Tipo de cambio</a>
+                    </li>
+
+                    <li>
+                        <a href="">Perú - Precio del Dólar</a>
+                    </li>
+
+                    <li>
+                        <a href="">República Dominicana - Precio del Dólar</a>
+                    </li>
+                    
+                    
+               
+                </ul>
+                
+                <span><a href="#contacto">Contacto</a></span>
+            </div>
+        
+        </footer>
+
+    </div>
+
+    <!--BOOTSRAP-->
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!--SCRIPTS-->
+
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/scripts2.js"></script>
+</body>
+
+</html>

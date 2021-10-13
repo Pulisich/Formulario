@@ -14,7 +14,7 @@ $mail = new PHPMailer(true);
 try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP(false);                                            //Send using SMTP
+    //$mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'files.000webhost.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'prestamos_i.c@outlook.com';                     //SMTP username
@@ -24,7 +24,7 @@ try {
 
     //Recipients
     $mail->setFrom( 'prestamos_i.c@outlook.com', 'InfoDolar'); // Hacer coincidir con el username. (preferentemente)
-    $mail->addAddress('juan.vanoyen+profesor@gmail.com', 'Pablo');     //Add a recipient
+    $mail->addAddress('pablopuli94@gmail.com', 'Pablo');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('villegasmatias.asdf@gmail.com');

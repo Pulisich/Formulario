@@ -7,27 +7,25 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-
 //Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
-
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    //$mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'files.000webhost.com';                     //Set the SMTP server to send through
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = '';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'prestamos_i.c@outlook.com';                     //SMTP username
-    $mail->Password   = '25Mayo66';                         //SMTP password
+    $mail->Username   = '';                     //SMTP username
+    $mail->Password   = '';                         //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom( 'prestamos_i.c@outlook.com', 'InfoDolar'); // Hacer coincidir con el username. (preferentemente)
+    $mail->setFrom( '', 'Pablo'); // Hacer coincidir con el username. (preferentemente)
     $mail->addAddress('pablopuli94@gmail.com', 'Pablo');     //Add a recipient
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
-    //$mail->addCC('villegasmatias.asdf@gmail.com');
+    //$mail->addCC('');
     //$mail->addBCC('bcc@example.com');
 
     //Attachments

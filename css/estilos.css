@@ -43,7 +43,15 @@ body{
 }
 
 footer{
+    
     margin-top: 2%;
+    padding:2%;
+    background-color: #2F131E;
+    color: #CEC3C1;
+}
+
+#footerError{
+    margin-top: 20%;
     padding:2%;
     background-color: #2F131E;
     color: #CEC3C1;

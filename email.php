@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-//Load Composer's autoloader
+//Load Composer's autoloader NO BORRES VENDOR
 require 'vendor/autoload.php';
 //Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -32,6 +32,9 @@ try {
     //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
+
+    //NO TOQUES NADA ABAJO
+
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Consulta de: '.$_POST['nombre'];
@@ -43,6 +46,8 @@ try {
     '<br>Celular: '.$_POST['celular'];
    
     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    //ACÁ ABAJO ESTÁN LOS MENSAJES DE SALIÓ EL MAIL Y ERROR
 
     $mail->send();
     header("location: gracias.html");

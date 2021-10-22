@@ -26,7 +26,7 @@ body{
     color: #240115; 
     /*FORMATO FONDO*/
     background-color: #87F5FB; /*Fijate que no se colorea del todo la sección, eso es porque estamos coloreando solamente el h1 y no el div del h1*/
-
+    
 }
 
 #contacto{
@@ -55,4 +55,12 @@ footer{
     padding:2%;
     background-color: #2F131E;
     color: #CEC3C1;
+}
+
+input{
+    max-width: 100%;
+}
+
+textarea{
+    max-width: 100%;
 }
